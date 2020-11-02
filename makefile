@@ -3,16 +3,16 @@
 CC= gcc
 CFLAGS= -Wall -Wextra -Wpedantic -Wuninitialized -Wundef -Wcast-align -Wstrict-overflow=2 -Wwrite-strings -Wno-format-nonliteral
 BINARY=list
-OBJECTS= main.o link.o
+OBJECTS= main.o fighter.o
 
 $(BINARY): $(OBJECTS)
 	$(CC) -o $(BINARY) $(OBJECTS)
 
-main.o: main.c link.h
+main.o: main.c fighter.h
 	$(CC) -c main.c $(CFLAGS)
 
-link.o: link.c link.h
-	$(CC) -c link.c $(CFLAGS)
+fighter.o: fighter.c fighter.h
+	$(CC) -c fighter.c $(CFLAGS)
 
 run: $(BINARY)
 	./$(BINARY)
