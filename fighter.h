@@ -1,24 +1,23 @@
-#ifndef FIGHTER_LIST_STRUCT
-#define FIGHTER_LIST_STRUCT
-struct fighter {
+#ifndef Fighter_LIST_STRUCT
+#define Fighter_LIST_STRUCT
+struct Fighter {
   char *street_name;
   int powerlevel;
   int times_revieved;
-  struct fighter *next;
+  struct Fighter *next;
 };
 
-struct fighter *create_fighter(char *street_name, int level, int deaths);
-struct fighter *clear_fighter(struct fighter *fighter_name);
-void print_fighter(struct fighter *street_name);
-void change_street_name(struct fighter *street_name, char *new_steet_name);
-void increase_deaths(struct fighter *street_name);
+struct Fighter *create_fighter(char *street_name, int level, int deaths);
+struct Fighter *clear_fighter(struct Fighter *fighter_name);
+void print_fighter(struct Fighter *street_name);
+void change_street_name(struct Fighter *street_name, char *new_steet_name);
+void increase_deaths(struct Fighter *street_name);
 
-struct fighter *insert_front(struct fighter *nodep);
-struct fighter *remove_node(struct fighter *nodep);
-void print_node(struct fighter *nodep);
-void print_list(struct fighter *nodep);
-void change_data(struct fighter *nodep, int data);
-void free_list(struct fighter *nodep);
+void print_list(struct Fighter *nodep);
+struct Fighter *insert_front(struct Fighter *nodep, char *street_name,
+                             int level, int deaths);
+struct Fighter *free_list(struct Fighter *nodep);
+struct Fighter *remove_node(struct Fighter *nodep, char *popped);
 
 /* struct chain { */
 /*   struct node *head; */
