@@ -1,7 +1,7 @@
 .POSIX:
 .PHONY: run clean
 CC= gcc
-CFLAGS= -Wall -Wextra -Wpedantic -Wuninitialized -Wundef -Wcast-align -Wstrict-overflow=2 -Wwrite-strings -Wno-format-nonliteral
+CFLAGS= -g -Wall -Wextra -Wpedantic -Wuninitialized -Wundef -Wcast-align -Wstrict-overflow=2 -Wwrite-strings -Wno-format-nonliteral
 BINARY=list
 OBJECTS= main.o fighter.o
 
